@@ -218,23 +218,27 @@
         data-aos-duration="2000" class="text-center mb-5">
           Контакты
         </h1>
+        <form action="sendContact/" method="POST">
+          {% csrf_token %}
         <div data-aos="fade-right"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine" class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <input name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
           <label for="floatingInput">Email почта</label>
         </div>
         <div data-aos="fade-right"
         data-aos-offset="300"
         data-aos-easing="ease-in-sine" class="form-floating">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+          <input name="number" type="text" class="form-control" id="floatingPassword" placeholder="Password">
           <label for="floatingPassword">Number Phone</label>
         </div>
         <div data-aos="fade-up"
         data-aos-duration="3000" class="form-floating mb-5 mt-5">
-          <textarea class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 100px"></textarea>
+          <textarea name="message" class="form-control" placeholder="Message" id="floatingTextarea2" style="height: 100px"></textarea>
           <label for="floatingTextarea2">Message</label>
         </div>
+        <button class="btn btn-success" type="submit">SEND</button>
+        </form>
       </div>
 
 
